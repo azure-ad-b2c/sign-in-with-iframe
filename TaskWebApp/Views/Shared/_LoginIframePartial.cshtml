@@ -1,0 +1,253 @@
+﻿<style>
+
+
+    /*Social buttons*/
+    .accountButton, button {
+        -moz-user-select: none;
+        user-select: none
+    }
+
+    .accountButton, a, button {
+        cursor: pointer
+    }
+
+        .accountButton, .accountButton:hover {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAh1BMVEX///9QUFBOTk5LS0tERERCQkI/Pz9ISEg6OjpGRkZNTU08PDyAgID09PSlpaWWlpZxcXFgYGBZWVlUVFT6+vrx8fHt7e3s7Ozo6Oji4uLJycnGxsa4uLiqqqqgoKCNjY2JiYmGhoZra2tmZmb7+/vu7u7d3d3U1NTNzc2+vr67u7usrKx7e3vprNQnAAAA8klEQVQ4y63Q127DMAxAUZpDwyMeSdqsNqu7/f/va6zahgGJKAr0vgk6DyQh+6V/BiTOOeNRA9zuAWBdM6WBlPDTvaUUoAuMrT0mgNvA1IJjQB3MKjACvp6DK0WAH+agtH8H9jQHLUUgz7Uhx8xOXzNESxirLCYA2mw8tacI5FyIYXq8A9ge2Qs6oTnw2e2ruho2rjBcXJ4ADh3jBOQLQnVhRFx2gNDZ4ACogbHXj/ft9Dj5AcgbJFu5AThQWuYBIGmgtAFQo4EFB+CPGthJAPypgY3BHsheA5UNwLyAvsYNoDyroKUe4EoFTQ/yDtTONvsGUJ8KTUYyH+UAAAAASUVORK5CYII=);
+            background-repeat: no-repeat
+        }
+
+    .accountButton {
+        border-style: none;
+        color: #fff;
+        margin-left: 0;
+        margin-right: 2px;
+        transition: background-color 1s ease 0s;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        text-align: center;
+        word-wrap: break-word;
+        height: 34px;
+        width: 158px;
+        padding-left: 30px;
+        background-color: #505050;
+        /*demo*/
+        display: inline-block;
+        text-align: center;
+        padding-left: 30px;
+        font-family: 'Segoe UI',Segoe,SegoeUI-Regular-final,Tahoma,Helvetica,Arial,sans-serif;
+        line-height: 30px;
+    }
+
+        .accountButton:hover {
+            background-color: #b9b9b9;
+            border: 1px solid #fff;
+            -moz-box-shadow: 0 0 0;
+            -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0
+        }
+
+        #next:hover, .accountButton:hover {
+            -moz-box-shadow: 0 0 0;
+            -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0;
+        }
+
+    #FacebookExchange {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAaVBMVEU7W5z///85Wps3WJsiRo8xU5fw8vYyUpY0VZiAj70pS5OBkb0vUpb7+fwsTpTR1ud6irllerBPaqX09fnx8vfs7fSQoMZxg7VsgLNGY6FCX58ZP4v++/7r7vTZ3OupstGIlsFWcalDYaCK3qwDAAAAnklEQVQ4y+XQyw7CIBAFUBgc5VUoWGtb3/7/RyoYkyZAiSsXvdt7kstA/hRg/B0GpZ6byQ3Dw0NBaH+lMYRle3T0kwayACRdBrr/gnN+QtpQWv8cR4DswiUAjozlz4RdF8AmlnmwjaDQImoZwQkRedoToUS7D+ColGoTwQidx8oEQDMHN1MBva5MOL70SCHuE1TOhOpHrRt0FWAOP4IX8PsG2qEOR30AAAAASUVORK5CYII=);
+        background-color: #3b5b9c
+    }
+
+        #FacebookExchange:hover {
+            background-color: #b0bdd7
+        }
+
+    #GoogleExchange {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAMAAACP+FljAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEX////62NXyi4Pual/rUEPqSz3tXlLyi4L5y8f86OfvcmjqQzXub2T85uT61dLrU0fvdWv86+nrT0LtX1PxgnnwgHfsXVHuaF398vHvdWnsWEv4xsL4wr7wenD+7sP0jRfqRjPsVkn85eT81mf7vAX3pQ7sUy/3ubT7xzH5uBj+/PyGsfjC1/v7vxP7yz9ChfSSuPiMtPj7xzDzwR78/fxel/VZlPWcv/n51GTVuBNOqki03r+vy/q60vv3672vtCI6qFA0qFNIsGTj8+jw9f5clvVDhfRrv4JLsWbC5cvY7t5gnt6Gsffp9exBrV5StGx4xY17xo9cuXU1pls9j8FNjPTo8P3S69lGr2JLoaPO3/zn9Opnvn5UtW7X7t3V7duCyZVeundCrl87q1lOs2l6xo+84sb9/v2qdWS0AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EIGQ4HDEDExrUAAADWSURBVDjLY2AYBZiAkYmZhZWNnQOHNCcXNxTw8GKT5+PnhgMBLPKCQiAZYRFRMW5ucQksCiSB0lLSIJaMLDZ5OXkFbkUlPB5QVlFVU8fnQw0VFU0tEEMbCnTQFOiqqOiBGfpQYEBIgSGaAiMVFWMTEMMUCMyACszRFFioWFpZwzg2QAW2aArs7B0cnZwhbBdXfX03F3RvuDs6Onp4glhe3kADfDD86esHVOHoHxAY5Bgcoh8ahhkS4RGOcBAZhS2somNg8rFxOIIzPiExKTklNS2dYaQBADviJWzWK7IJAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTA4LTI1VDE0OjA3OjEyLTA0OjAwBQDEvwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wOC0yNVQxNDowNzoxMi0wNDowMHRdfAMAAAAASUVORK5CYII=);
+        outline-offset: -2.5px
+    }
+
+        #GoogleExchange:hover {
+            background-color: #eee
+        }
+
+    /*Sivider*/
+    .divider {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+        .divider h2 {
+            display: table;
+            white-space: nowrap;
+            font-size: 1em;
+            font-weight: 700;
+            color: black;
+        }
+
+            .divider h2:after, .divider h2:before {
+                border-top: 1px solid #B8B8B8;
+                content: '';
+                display: table-cell;
+                position: relative;
+                top: .7em;
+                width: 50%
+            }
+
+            .divider h2:before {
+                right: 3%
+            }
+
+            .divider h2:after {
+                left: 3%
+            }
+    /*Overlay DIV with the iframe*/
+    #overlay {
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+    }
+
+    iframe#loginframe {
+        width: 100%;
+        height: 400px;
+        display: block;
+    }
+
+    /*#overlaytext {
+        position: absolute;
+        margin-top: 50px;
+        left: 50%;
+        background-color: white;
+        transform: translate(-50%,0);
+        -ms-transform: translate(-50%,0);
+        background-color: white;
+    }*/
+
+    #overlaytext {
+        position: relative;
+        margin-top: 50px;
+        padding-left: 10px;
+        float: right;
+        background-color: white;
+        float: right;
+        width: 650px;
+    }
+
+
+
+
+    /* On screens that are 1500px or less */
+    @@media  screen and (max-width: 1500px) {
+        #overlaytext {
+            float: right;
+            width: 520px;
+            /*background-color: red;*/
+        }
+    }
+
+    /* On screens that are 992px or less */
+    @@media  screen and (max-width: 992px) {
+        #overlaytext {
+            float: right;
+            width: 450px;
+            /*background-color: orange;*/
+        }
+    }
+
+    /* On screens that are 600px or less */
+    @@media screen and (max-width: 600px) {
+        #overlaytext {
+            float: unset;
+            width: 100%;
+            height: 100%;
+            padding-top: 3px;
+            /*background-color: yellow;*/
+        }
+
+        iframe#loginframe {
+            height: 800px;
+        }
+    }
+
+        #overlaytext table, #overlaytext tr, #overlaytext td {
+            border: none;
+            background-color: white;
+        }
+    
+</style>
+
+<div id="overlay" onclick="signInOff()">
+    <div id="overlaytext">
+        <table border="0" style="margin-top:30px;">
+            <tr>
+                <td id="signInWithSocialAccount" align="center">
+                    @if (Request.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Sign out", "SignOut", "Account")
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Facebook", "SignUpSignIn", "Account", new { redirectUrl = "/", idp = "facebook.com" }, new { id = "FacebookExchange", @class = "accountButton firstButton" })
+                        <samp style="margin-left:10px" />
+                        @Html.ActionLink("Google", "SignUpSignIn", "Account", new { redirectUrl = "/", idp = "google.com" }, new { id = "GoogleExchange", @class = "accountButton firstButton" })
+
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="signInWithSocialAccountDivider" class="divider">
+                        <h2>OR</h2>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 10px;"><iframe id="loginframe" frameborder="0" src=""></iframe></td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+</div>
+
+
+<script>
+    function signIn() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("loginframe").src = "/account/SignUpSignIn";
+        document.getElementById("topMenu").className = "navbar-collapse collapse";
+
+        document.getElementById("signInWithSocialAccount").style.display = "block";
+        document.getElementById("signInWithSocialAccountDivider").style.display = "block";
+        
+
+    }
+
+    function signInOff() {
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    window.addEventListener('message', function (e) {
+        console.log(e.data);
+        if (e.data === "signUp");
+        {
+            document.getElementById("signInWithSocialAccount").style.display = "none";
+            document.getElementById("signInWithSocialAccountDivider").style.display = "none";
+        }
+
+    }, false);
+</script>
